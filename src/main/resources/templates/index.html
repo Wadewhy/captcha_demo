@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title></title>
+    <link rel="stylesheet" href="../static/layui.css" media="all"/>
+</head>
+<body>
+<form  method="post" th:action="@{/Captcha/code}">
+    <div>
+        <label for="code">线段干扰验证码1</label>
+        <input type="text" placeholder="请输入验证码" autocomplete="off" name="code1" class="layui-input">
+        <img src="/Captcha/getCode01" onclick="this.src=this.src+'?'" id="img1">
+    </div>
+    <br>
+    <div>
+    <label for="code">圆圈干扰验证码2</label>
+    <input type="text" placeholder="请输入验证码" autocomplete="off" name="code2" class="layui-input">
+    <img src="/Captcha/getCode02" onclick="this.src=this.src+'?'" id="img2">
+</div>
+    <br>
+    <div>
+        <label for="code">纯数字验证码3</label>
+        <input type="text" placeholder="请输入验证码" autocomplete="off" name="code3" class="layui-input">
+        <img src="/Captcha/getCode03" onclick="this.src=this.src+'?'" id="img3">
+    </div>
+    <br>
+    <div>
+        <label for="code">四则运算验证码4</label>
+        <input type="text" placeholder="请输入验证码"  name="code4" >
+        <img src="/Captcha/getCode04" onclick="this.src=this.src+'?'" id="img4">
+    </div>
+    <input type="submit" />
+</form>
+
+</body>
+<script type="text/javascript" src="../static/layui.js"></script>
+
+</html>
